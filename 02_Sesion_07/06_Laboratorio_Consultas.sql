@@ -1,13 +1,13 @@
--- 💻 LABORATORIO SESIÓN 7: EL INTERROGATORIO (Antigravity)
+-- 💻 LABORATORIO SESIÓN 7: EL INTERROGATORIO (SQL en VS Code)
 -- ═══════════════════════════════════════════════════════════════
 -- Guía de Referencia: 02_Guia_S07_Antigravity.md
--- Base de Datos: 00_Base_Datos_S07.db (500 registros)
+-- Base de Datos: Novamarket_S07.db (500 registros)
 -- ═══════════════════════════════════════════════════════════════
 
 -- INSTRUCCIONES:
 -- 1. Escribe tu código debajo de cada bloque.
--- 2. Asegúrate de estar conectado a '00_Base_Datos_S07.db'.
--- 3. Para ejecutar: Selecciona con el mouse y presiona Cmd + E.
+-- 2. Asegúrate de estar conectado a 'Novamarket_S07.db'.
+-- 3. Para ejecutar: Selecciona tu código con el mouse y presiona Cmd + E.
 
 -- ══ BLOQUE A — Exploración Inicial ═════════════════════════════
 

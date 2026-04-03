@@ -1,58 +1,67 @@
 # Sesión 07 | Laboratorio Antigravity
-## Guía de Ejecución Local (SQLite)
+## Guía: El Interrogatorio (SQL con NovaMarket)
 
-Esta guía te explica cómo realizar el "Interrogatorio" de datos (SELECT y WHERE) usando la base de datos completa de NovaMarket en VS Code.
-
----
-
-## 1. Conexión a la Base de Datos
-Ya hemos preparado una base de datos con 500 transacciones reales para ti.
-
-1.  **Ubicación:** Entra a la carpeta `02_Sesion_07` desde tu explorador de VS Code.
-2.  **Archivo:** Localiza el archivo **`novamarket_s07.db`**.
-3.  **Configurar SQLTools:** 
-    - Ve al cilindro de SQLTools.
-    - Crea una nueva conexión (Add New Connection).
-    - Nombre: `NovaMarket_S07`.
-    - Database File: Selecciona `02_Sesion_07/novamarket_s07.db`.
-    - Haz clic en **CONNECT**.
+Hoy aprenderás a transformar datos de Excel a una base de datos SQLite usando Python, y luego realizarás el "Interrogatorio" (SELECT y WHERE) usando VS Code, con el apoyo de **Antigravity** como tu tutor.
 
 ---
 
-## 2. Ejecutar las Consultas (Laboratorio)
+## 1. El Puente de Datos: Del Excel al SQLite
+En lugar de escribir cientos de comandos `INSERT` a mano, usaremos un pequeño script de Python para automatizar el proceso de carga. Así es como se hace en el mundo profesional.
 
-1.  Abre el archivo **`03_Laboratorio_S07.sql`**.
-2.  **Verificación Inicial:** Copia y ejecuta este bloque para confirmar que tienes los 500 registros:
-    ```sql
-    SELECT 'DimProducto' AS Tabla, COUNT(*) AS Registros FROM DimProducto
-    UNION ALL SELECT 'DimCiudad',  COUNT(*) FROM DimCiudad
-    UNION ALL SELECT 'DimFecha',   COUNT(*) FROM DimFecha
-    UNION ALL SELECT 'FactVentas', COUNT(*) FROM FactVentas;
-    ```
-3.  **Exploración (Bloque A):** Ejecuta las primeras líneas para ver las 500 ventas:
-    ```sql
-    SELECT * FROM FactVentas LIMIT 10;
-    ```
-4.  **Filtros con WHERE (Bloques B y C):** Sigue los ejemplos de la guía conceptual y aplícalos en tu archivo de laboratorio.
+### Paso A: Preparar el Entorno
+Abre la terminal de VS Code y asegúrate de tener instaladas las librerías necesarias:
+```bash
+pip install pandas openpyxl
+```
 
----
+> [!NOTE]
+> **¿Para qué sirven estas librerías?**
+> - **Pandas:** Es la herramienta líder para manipulación y análisis de datos en Python. Nos permite leer y procesar tablas de forma ultra rápida.
+> - **Openpyxl:** Es el "motor" o traductor que permite a Pandas abrir equipos y leer archivos modernos de Excel (`.xlsx`).
 
-## 3. Desafíos Autónomos
-
-Al final de tu archivo SQL encontrarás desafíos. Resuélvelos usando lo aprendido.
-
----
-
-## 4. Proceso de Carga (Excel a BD)
-Para este laboratorio, seguimos un flujo de ingeniería de datos estándar:
-
-1.  **Limpieza (Power Query):** Los datos originales fueron procesados en Excel usando Power Query para eliminar nulos y estandarizar formatos (visto en `S03_Ventas_Datos_Limpios_Power_Query.xlsx`).
-2.  **Modelado:** Creamos un modelo relacional con 3 dimensiones (`DimProducto`, `DimCiudad`, `DimFecha`) y una tabla de hechos (`FactVentas`).
-3.  **Carga SQL:** Los 500 registros limpios se convirtieron en sentencias `INSERT` dentro del script `05_Script_Carga_DB_S07.sql`.
-4.  **Validación:** Hemos verificado que la base de datos `00_Base_Datos_S07.db` contiene exactamente los mismos 500 registros que el archivo Excel procesado.
+### Paso B: Ejecutar el Cargador
+Localiza el archivo **`03_Cargador_Excel_a_SQLite.py`** y ejecútalo. Este script leerá el archivo de Excel **`04_Ventas_Datos_Limpios_S03.xlsx`** y creará automáticamente el archivo de base de datos **`Novamarket_S07.db`**.
 
 > [!TIP]
-> **Pide ayuda a Antigravity:** Si no sabes cómo filtrar por un rango de fechas, utiliza el chat y pregunta: *"@antigravity, ¿cómo uso BETWEEN para filtrar el mes de noviembre de 2023?"*
+> **¿Quieres entender el código?** Revisa la guía **[03_Detalle_Codigo_Python.md](file:///Users/macbookpro/Developer/Learning/SQL/02_Sesion_07/03_Detalle_Codigo_Python.md)** para ver la explicación paso a paso de lo que hace Python con tus datos.
+
+> [!NOTE]
+> Puedes ejecutarlo haciendo clic en el botón ▶️ (Run) de Python en la esquina superior derecha o escribiendo en la terminal:
+> `python 03_Cargador_Excel_a_SQLite.py`
+
+---
+
+## 2. Conexión con SQLTools
+Una vez generada la base de datos `Novamarket_S07.db`, debemos conectar VS Code para realizar nuestras consultas SQL.
+
+1.  Ve al menú de **SQLTools** (icono del cilindro).
+2.  Crea una **Nueva Conexión** (Add New Connection).
+    - **Driver:** SQLite (Node.js).
+    - **Nombre:** `NovaMarket_S07`.
+    - **Database File:** Busca el archivo **`Novamarket_S07.db`** en la carpeta `02_Sesion_07`.
+3.  Haz clic en **SAVE CONNECTION** y luego en **CONNECT**.
+
+---
+
+## 3. Laboratorio: El Interrogatorio (Bloques A - E)
+Abre el archivo **`06_Laboratorio_Consultas.sql`**. Escribe allí tus propias consultas SQL y ejecútalas contra la base de datos confirmando que tienes los 500 registros iniciales.
+
+**Recuerda pedir ayuda a Antigravity de esta forma:**
+- **Sintaxis:** *"@antigravity, ¿cómo funciona el operador BETWEEN para fechas?"*
+- **Lógica:** *"@antigravity, ¿qué expresión necesito para calcular el margen bruto?"*
+- **Errores:** *"@antigravity, mi SQL da error, ¿puedes explicarme qué está mal?"*
+
+### Bloques de Práctica
+1.  **Bloque A (Exploración):** Usa `SELECT *` y `LIMIT` para conocer tus datos.
+2.  **Bloque B (Cálculos):** Practica el uso de alias (`AS`) y operaciones matemáticas.
+3.  **Bloque C (Filtros WHERE):** El corazón de la sesión. Prueba filtros por texto, rangos (`BETWEEN`) y listas (`IN`).
+4.  **Bloque D (Orden y Límites):** Usa `ORDER BY` para encontrar los extremos.
+5.  **Bloque E (Desafíos):** Intenta resolver los problemas de negocio planteados.
+
+---
+
+> [!IMPORTANT]
+> **Consistencia del Nombre:** Asegúrate de que el archivo generado sea **`Novamarket_S07.db`**. Si usas un nombre diferente, SQLTools no encontrará los datos.
 
 ---
 *Sesión 07 | Antigravity Lab | NovaMarket Tech*

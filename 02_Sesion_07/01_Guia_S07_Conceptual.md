@@ -14,7 +14,7 @@
 | Proceso analítico | **INTERROGAR** — la calidad de la respuesta depende de la calidad de la pregunta |
 | Herramienta | MySQL Workbench / [dbfiddle.uk](https://dbfiddle.uk) (MySQL 8.0) |
 | Archivo Lab Local | `02_Guia_S07_Antigravity.md` (Si usas VS Code) |
-| Archivo de práctica | `03_Laboratorio_S07.sql` |
+| Archivo de práctica | `06_Laboratorio_Consultas.sql` |
 
 > **Tu misión hoy:** En S6 cargaste 500 transacciones de NovaMarket en una base de datos relacional. Hoy las interrogas. Al final de esta sesión habrás escrito más de 20 consultas SQL sobre datos reales — cada una responde una pregunta específica del caso.
 
@@ -25,7 +25,7 @@
 Ejecuta esto para confirmar que la BD de S6 está correctamente cargada:
 
 ```sql
-USE novamarket_tech;
+-- En SQLite la conexión se hace vía SQLTools a Novamarket_S07.db
 
 SELECT 'DimProducto' AS Tabla, COUNT(*) AS Registros FROM DimProducto
 UNION ALL SELECT 'DimCiudad',  COUNT(*) FROM DimCiudad

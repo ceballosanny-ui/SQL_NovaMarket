@@ -1,10 +1,10 @@
 -- ═══════════════════════════════════════════════════════════════
--- NOVAMARKET TECH — SESIÓN 7: EL INTERROGATORIO
+-- NOVAMARKET TECH — SESIÓN 7: EL INTERROGATORIO (SOLUCIONES)
 -- Haz las preguntas correctas — SELECT, WHERE, ORDER BY, LIMIT
--- Prerequisito: tener cargada la BD de S6 (S06_NovaMarket_DB_Completa.sql)
+-- Prerequisito: Base de Datos Novamarket_S07.db generada
 -- ═══════════════════════════════════════════════════════════════
 
-USE novamarket_tech;
+-- NOTA: En SQLite no se usa el comando USE. La conexión se define en SQLTools.
 
 
 -- ══════════════════════════════════════════════════════════════
