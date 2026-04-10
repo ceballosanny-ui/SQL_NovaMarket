@@ -56,12 +56,43 @@ Abre el archivo **`06_Laboratorio_Consultas.sql`**. Escribe allí tus propias co
 - **Lógica:** *"@antigravity, ¿qué expresión necesito para calcular el margen bruto?"*
 - **Errores:** *"@antigravity, mi SQL da error, ¿puedes explicarme qué está mal?"*
 
-### Bloques de Práctica
-1.  **Bloque A (Exploración):** Usa `SELECT *` y `LIMIT` para conocer tus datos.
-2.  **Bloque B (Cálculos):** Practica el uso de alias (`AS`) y operaciones matemáticas.
-3.  **Bloque C (Filtros WHERE):** El corazón de la sesión. Prueba filtros por texto, rangos (`BETWEEN`) y listas (`IN`).
-4.  **Bloque D (Orden y Límites):** Usa `ORDER BY` para encontrar los extremos.
-5.  **Bloque E (Desafíos):** Intenta resolver los problemas de negocio planteados.
+### Bloques de Práctica (El Interrogatorio)
+Para cada ejercicio, escribe la consulta en tu archivo `.sql`, selecciónala y ejecútala. Compara el número de filas obtenidas con el **Criterio de Éxito**.
+
+#### **Bloque A: Exploración Inicial**
+*(Referencia: Guía Conceptual Sección A)*
+| # | Ejercicio | Criterio de Éxito |
+|---|---|---|
+| A1 | Ver las primeras 10 transacciones de la tabla `FactVentas`. | Se muestran exactas 10 filas. |
+| A2 | Contar el total de registros en la tabla `FactVentas`. | Resultado: 1 sola fila con el valor **500**. |
+
+#### **Bloque B: Columnas y Cálculos**
+*(Referencia: Guía Conceptual Sección B)*
+| # | Ejercicio | Criterio de Éxito |
+|---|---|---|
+| B1 | Mostrar `TransaccionID`, `Cantidad`, `Precio_Venta` y una nueva columna `Venta_Bruta` (Cantidad * Precio_Venta). | Las 4 columnas son visibles. |
+| B2 | Calcular la `Venta_Neta` redondeada a 2 decimales usando el `Descuento_Pct`. | El resultado coincide con `ROUND(...)`. |
+
+#### **Bloque C: Filtros WHERE**
+*(Referencia: Guía Conceptual Sección C)*
+| # | Ejercicio | Criterio de Éxito |
+|---|---|---|
+| C1 | Filtrar todas las ventas realizadas en la ciudad de **Leticia** (`CiudadID = 6`). | Debes obtener **82 filas**. |
+| C2 | Mostrar ventas con un **descuento superior al 15%** (`Descuento_Pct > 0.15`). | Debes obtener **70 filas**. |
+
+#### **Bloque D: Orden y Límites**
+*(Referencia: Guía Conceptual Sección D)*
+| # | Ejercicio | Criterio de Éxito |
+|---|---|---|
+| D1 | Mostrar las 10 transacciones con el **Costo de Envío más alto**, de mayor a menor. | Top 10 visible. |
+| D2 | Mostrar las 5 ventas más económicas (`Precio_Venta`) de Leticia. | 5 filas ordenadas por precio. |
+
+#### **Bloque E: Desafíos de Negocio**
+*(Referencia: Guía Conceptual Sección E)*
+| # | Ejercicio | Criterio de Éxito |
+|---|---|---|
+| E1 | ¿Cuántas ventas hubo en **noviembre de 2023**? (`FechaID` entre 20231101 y 20231130). | Debes obtener **85 filas**. |
+| E2 | Encuentra las 10 ventas que más "destruyen valor" (Venta Neta - Costo Envío más bajo). | Resultados con margen negativo. |
 
 ---
 
