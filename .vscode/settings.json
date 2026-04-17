@@ -11,6 +11,18 @@
             "driver": "SQLite",
             "name": "Sesion_07",
             "database": "${workspaceFolder:SQL}/02_Sesion_07/Novamarket_S07.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "conexión1",
+            "database": "${workspaceFolder:SQL}/01_Sesion_06/Base_Datos_Ejemplo.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "conexion2",
+            "database": "${workspaceFolder:SQL}/02_Sesion_07/Novamarket_S07.db"
         }
     ],
     "sqltools.useNodeRuntime": true

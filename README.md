@@ -31,22 +31,23 @@ Antes de escribir tu primera consulta, debes preparar tu "cabina de mando". Sigu
 
 ---
 
-## 🛠️ Metodología de Trabajo
-Para que tu trabajo pueda ser calificado y guardado en la nube, seguimos este flujo:
+## 📤 Instrucciones de Entrega (Para Alumnos)
+Para que el profesor pueda calificar tu avance, sigue estos pasos:
 
-1.  **FORK**: Crea tu propia copia de este repo en GitHub.
-2.  **CLONE**: Baja tu copia a tu computadora.
-3.  **WORK**: Realiza los laboratorios en VS Code.
-4.  **PUSH**: Sube tus soluciones a tu GitHub personal usando los comandos `git add`, `commit` y `push`.
+1.  **Sube tus cambios**: Asegúrate de haber ejecutado los 3 comandos de Git (`add`, `commit` y `push`).
+2.  **Copia tu URL**: Ve a tu perfil de GitHub, entra en el repositorio `SQL_NovaMarket` y copia la dirección de la barra del navegador.
+3.  **Verificación**: La URL debe empezar con tu nombre de usuario. Ejemplo: `https://github.com/TU_USUARIO/SQL_NovaMarket`.
+4.  **Entrega**: Pega ese enlace en la plataforma que el profesor indique (Classroom, correo, etc.).
 
 ---
 
 ## 👨‍🏫 Sección para el Docente & Evaluación
 Si eres el docente o necesitas calificar este repositorio, el flujo es:
 
-1.  **Revisión de Repositorios**: Cada alumno entrega el link de su **Fork personal**.
-2.  **Uso de Antigravity**: El agente de IA puede auditar el código de los archivos `.sql` directamente desde el repositorio del alumno y generar una retroalimentación basada en los **Criterios de Éxito** definidos en cada guía.
-3.  **Sincronización**: Para enviar material nuevo, realiza un `git push` a la rama `main` del repositorio origen. Los alumnos recibirán los cambios mediante un `git pull`.
+1.  **Revisión de Repositorios**: Cada alumno entrega la URL HTTPS de su **Fork personal**.
+2.  **Auditoría con Antigravity**: Puedes usar el agente de IA para revisar los archivos `.sql` y validar el cumplimiento de los **Criterios de Éxito** directamente en el repo del alumno.
+3.  **Actualizaciones**: Sube material nuevo al repositorio origen (`upstream`) y pide a los alumnos que ejecuten `git pull upstream main`.
+
 
 ---
 *NovaMarket Tech | Analítica de Datos para la Toma de Decisiones*

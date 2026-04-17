@@ -13,8 +13,9 @@ Esta guía te permitirá configurar tu entorno profesional de análisis de datos
 | **¿Por qué?** | Para que tus cambios tengan autoría y el profesor pueda calificar tu trabajo en GitHub. |
 
 **Instrucción:**
-1.  Descarga Git: [https://git-scm.com/download/](https://git-scm.com/download/)
-2.  Configura tu identidad:
+1.  **Descargar:** Baja el instalador de la web oficial: [https://git-scm.com/download/](https://git-scm.com/download/)
+2.  **Instalar:** Haz doble clic en el archivo descargado y sigue los pasos del asistente en tu computadora.
+3.  **Configurar identidad:** Abre la Terminal de VS Code y escribe estos dos comandos con tu información real:
     ```bash
     git config --global user.name "Tu Nombre Real"
     git config --global user.email "tu@email.com"
@@ -69,7 +70,7 @@ Esta guía te permitirá configurar tu entorno profesional de análisis de datos
 
 **Instrucción:**
 1.  **Fork:** En GitHub, presiona el botón **Fork** en el repositorio del profesor.
-2.  **Clone:** Desde TU repositorio (el fork), descarga el código a tu PC:
+2.  **Clone:** En TU repositorio (el fork), haz clic en el botón verde **<> Code**, selecciona la pestaña **HTTPS** y copia el enlace. En tu terminal escribe:
     ```bash
     git clone https://github.com/TU_USUARIO/SQL_NovaMarket.git
     ```
@@ -128,7 +129,22 @@ git pull upstream main
 
 ---
 
+## Paso 6: Entrega y Calificación 📤
+| Pregunta | Respuesta |
+|---|---|
+| **¿Dónde?** | En el navegador (Tu perfil de GitHub). |
+| **¿Qué?** | Copiar la URL HTTPS de tu repositorio. |
+| **¿Cuando?** | Una sola vez para registrar tu trabajo con el profesor. |
+| **¿Por qué?** | Para que el profesor pueda entrar a tu código y calificarlo. |
+
+**Instrucción:**
+1.  Entra a GitHub y busca tu repositorio `SQL_NovaMarket`.
+2.  Copia la URL de la barra de direcciones (ej: `https://github.com/TuUsuario/SQL_NovaMarket`).
+3.  **Verificación:** Asegúrate de que el enlace tenga TU nombre de usuario y no el del profesor (`edwardzd`).
+4.  Entrega el link por el medio que se te indique (Classroom, chat, etc.).
+
 ---
+
 
 ## 🧭 Manual de Supervivencia: Navegación en la Terminal
 Si te pierdes o no sabes si estás en la **Raíz**, usa estos comandos "brújula":
@@ -150,6 +166,22 @@ Si te pierdes o no sabes si estás en la **Raíz**, usa estos comandos "brújula
 > 3.  ¡Listo! Ya estás parado exactamente donde necesitas.
 
 ---
+
+## 🔄 ¿Necesitas empezar de cero? (Reiniciar sin miedo)
+Si sientes que tu carpeta se desordenó o algo dejó de funcionar, puedes borrar la carpeta del proyecto y empezar de nuevo **sin tener que reinstalar nada**.
+
+**Lo que NO tienes que repetir:**
+*   ❌ No instales Git de nuevo.
+*   ❌ No instales Python ni las librerías (`pandas`, `openpyxl`).
+*   ❌ No vuelvas a configurar tu nombre y correo.
+
+**Lo ÚNICO que debes hacer:**
+1.  Borra la carpeta física en tu computadora.
+2.  Repite el **Paso 3 (Clone)** para bajar una copia limpia.
+3.  Repite el **Paso 5 (Conexión)** para que SQLTools encuentre la base de datos en su nueva ubicación.
+
+---
+
 
 ## Resumen de Reglas de Oro ✨
 1.  **Carpeta Raíz:** Todos los comandos de Git (`push`, `pull`, `commit`) deben ejecutarse estando "parado" en la carpeta principal del proyecto.
