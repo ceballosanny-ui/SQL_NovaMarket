@@ -1,4 +1,5 @@
 -- 💻 LABORATORIO SESIÓN 6: EL CONTRATO (Antigravity)
+-- Alumna: Anny Sofia
 -- ═══════════════════════════════════════════════════════════════
 -- Guía de Referencia: 02_Guia_S06_Antigravity.md
 -- ═══════════════════════════════════════════════════════════════
