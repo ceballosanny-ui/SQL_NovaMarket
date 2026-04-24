@@ -4,7 +4,7 @@ import os
 
 # ⚙️ CONFIGURACIÓN INICIAL
 EXCEL_FILE = '04_Ventas_Datos_Limpios_S03.xlsx'
-DATABASE_FILE = 'Novamarket_S07.db'
+DATABASE_FILE = '01_Base_Datos_S07_AnnySofia.db'
 
 def cargar_y_modelar():
     print(f"🚀 Iniciando carga desde: {EXCEL_FILE}...")
