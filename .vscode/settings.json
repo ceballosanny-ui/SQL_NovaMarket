@@ -4,6 +4,11 @@
             "name": "01_Base_Datos_S06_AnnySofia",
             "driver": "SQLite",
             "database": "${workspaceFolder}/01_Sesion_06/01_Base_Datos_S06_AnnySofia.db"
+        },
+        {
+            "name": "Novamarket_S07_Anny",
+            "driver": "SQLite",
+            "database": "${workspaceFolder}/02_Sesion_07/Novamarket_S07_Anny.db"
         }
     ],
     "sqltools.useNodeRuntime": false
