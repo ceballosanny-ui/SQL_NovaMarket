@@ -9,6 +9,35 @@
             "name": "Novamarket_S07_Anny",
             "driver": "SQLite",
             "database": "${workspaceFolder}/02_Sesion_07/Novamarket_S07_Anny.db"
+        },
+        {
+            "driver": "SQLite",
+            "name": "Sesion_07",
+            "database": "${workspaceFolder:SQL}/02_Sesion_07/Novamarket_S07.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "conexión1",
+            "database": "${workspaceFolder:SQL}/01_Sesion_06/Base_Datos_Ejemplo.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "conexion2",
+            "database": "${workspaceFolder:SQL}/02_Sesion_07/Novamarket_S07.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "conexionviernes",
+            "database": "${workspaceFolder:SQL}/01_Sesion_06/basedatoss6ejemplo.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "ConexionS8y9",
+            "database": "${workspaceFolder:SQL}/03_Sesion_08_09/Novamarket_S08S09.db"
         }
     ],
     "sqltools.useNodeRuntime": false
