@@ -19,6 +19,8 @@ SELECT CiudadID,
     COUNT(*) AS Filas
 FROM FactVentas
 GROUP BY CiudadID;
+--Respuesta paso 1:
+--Se observan dos columnas llamadas CiudadID y Filas. El resultado muestra 6 registros, debido a que la información fue agrupada por cada ciudad, permitiendo visualizar la cantidad de transacciones correspondientes a cada una.
 -- Paso 2: El veredicto de Leticia con GROUP BY (Usando IDs)
 SELECT CiudadID,
     COUNT(*) AS Transacciones,
@@ -36,6 +38,8 @@ SELECT CiudadID,
 FROM FactVentas
 GROUP BY CiudadID
 ORDER BY Margen_Aproximado ASC;
+--Respuesta paso 2:
+--La consulta permite identificar que la ciudad correspondiente al CiudadID 6, es decir, Leticia, presenta un Margen Aproximado negativo, registrando una pérdida cercana a -15,35. Además, los resultados obtenidos coinciden con la información mostrada previamente en el dashboard de Power BI de la sección S4, lo que confirma la consistencia de los datos analizados.
 -- Paso 3: SUM vs AVG
 SELECT CiudadID,
     ROUND(SUM(Costo_Envio), 2) AS Costo_TOTAL,
@@ -43,6 +47,8 @@ SELECT CiudadID,
 FROM FactVentas
 WHERE CiudadID = 6
 GROUP BY CiudadID;
+--Respuesta paso 3:
+--Para evaluar si es conveniente cerrar operaciones en Leticia, resulta más útil aplicar la función SUM, ya que esta permite conocer el valor total acumulado de las pérdidas. Así se logra analizar de manera más completa el impacto económico que genera dicha ciudad en la rentabilidad de la empresa.
 -- ══ PARTE 2 — JOIN (Nombres Reales) ════════════════════════════
 -- Paso 4: El primer JOIN: 'Leticia' en lugar de '6'
 SELECT f.TransaccionID,
@@ -53,6 +59,8 @@ FROM FactVentas f
     INNER JOIN DimCiudad c ON f.CiudadID = c.CiudadID
 WHERE c.Ciudad = 'Leticia'
 LIMIT 5;
+--Respuesta paso 4:
+--La relación entre las tablas se realiza mediante la columna CiudadID. Gracias al uso del INNER JOIN, fue posible obtener el nombre de la ciudad desde la tabla DimCiudad, reemplazando el código numérico "6" por el nombre "Leticia".
 -- Paso 5: Doble JOIN: ciudad Y producto
 SELECT f.TransaccionID,
     c.Ciudad AS Ciudad,
@@ -105,6 +113,8 @@ FROM FactVentas f
     INNER JOIN DimCiudad c ON f.CiudadID = c.CiudadID
 GROUP BY c.Ciudad
 ORDER BY Margen_Aproximado ASC;
+--Repuesta paso 6:
+--Sí, dentro de los resultados aparece la ciudad de Leticia con un valor negativo en el campo Margen_Aproximado. La pérdida registrada es aproximadamente de -15,35, y este dato coincide con el reportado en el dashboard de Power BI de la sección S4.
 -- ═══════════════════════════════════════════════════════════════
 -- 🚀 PRÁCTICA AUTÓNOMA (ENTREGABLES)
 -- Escribe tus consultas debajo de cada enunciado.
